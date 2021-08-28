@@ -1,0 +1,17 @@
+.someClass {
+
+}
+
+.error {
+    border: 1px solid #6a2424;
+    height: 20px
+}
+.errorInput {
+    border: 2px solid red;
+}
+.Input {
+    border: 1px solid green;
+}
+.errorText {
+    color: red
+}

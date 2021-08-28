@@ -1,0 +1,11 @@
+.checkbox {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+}
+.checkbox:checked{
+    background-image: url("https://banner2.cleanpng.com/20180610/fhg/kisspng-checkbox-check-mark-button-clip-art-check-marks-5b1d86d5bca210.2986772015286617177727.jpg");
+}
+.spanClassName {
+
+}
