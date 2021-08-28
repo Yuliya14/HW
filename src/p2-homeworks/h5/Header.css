@@ -1,0 +1,29 @@
+.nav {
+    position: relative;
+    display: inline-block;
+}
+.mainMenuButton {
+    background-color: #e87b7b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+}
+.mainMenuButton:hover {
+    background-color: #0004ff;
+}
+.dropdownChild {
+    display: none;
+    background-color: lavenderblush;
+    min-width: 200px;
+}
+.dropdownChild.NavLink {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.nav:hover .dropdownChild {
+    display: block;
+}
