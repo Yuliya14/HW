@@ -1,0 +1,21 @@
+.select {
+    padding: 5px;
+    height: 30px;
+    width: 100px;
+    border: 2px solid lightcoral;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("https://img1.freepng.ru/20180315/fbe/kisspng-arrow-clip-art-red-arrow-down-5aaae5b0eb6f60.2683628715211493609644.jpg");
+    background-size: .65em auto, 100%;
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+}
+.select:focus {
+    border: lightcoral;
+}
+.option {
+    background-color: lightcoral;
+}
+.option:checked {
+    background: red;
+}
