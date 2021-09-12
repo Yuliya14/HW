@@ -15,11 +15,10 @@ type ActionsType = sortActionType | checkActionType
 export const homeWorkReducer = (state: UsersType, action: ActionsType): UsersType => {
     switch (action.type) {
         case 'sort': {
-
             if(action.payload === 'up'){
-                return state.sort((a,b) => a.age-b.age)
+                return [...state].sort((a,b) => a.age-b.age)
             } else {
-                return state.sort((a,b) => a.age-b.age).reverse()
+                return [...state].sort((a,b) => a.age-b.age).reverse()
             }
         }
         case 'check': {
