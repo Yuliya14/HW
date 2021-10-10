@@ -1,31 +1,32 @@
-import React, {useState} from 'react'
+import React, {MouseEventHandler, useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {Timeline} from "@material-ui/icons";
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>()
+    const [date, setDate] = useState<Date>(new Date())
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        // stop
+        clearInterval(timerId)
     }
     const start = () => {
         stop()
-        const id: number = window.setInterval(() => {
-            // setDate
+        const id: number = window.setInterval((e: number) => {
+            setDate(new Date())
         }, 1000)
-        setTimerId(id)
+       setTimerId(id)
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
     }
     const onMouseLeave = () => {
-        // close
+        setShow(false)
     }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+    const stringTime = date?.toLocaleTimeString()|| <br/>
+    const stringDate = date?.toLocaleDateString() || <br/>
 
     return (
         <div>
@@ -36,11 +37,12 @@ function Clock() {
                 {stringTime}
             </div>
 
-            {show && (
+            {show ? (
                 <div>
                     {stringDate}
                 </div>
-            )}
+            ):
+                (<br/>)}
 
             <SuperButton onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>
